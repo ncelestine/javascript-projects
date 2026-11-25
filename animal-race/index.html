@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Race</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+  </head>
+  <!-- leaderboard for the race results -->
+  <body style="background-color:powderblue;">
+    <div class="topnav">
+      <p>
+      <a href="#leaderboards" id="" class="btn btn__menu">Leaderboards</a>
+      <a href="#" id="clearAnimals" class="btn btn__menu">Clear Animals</a>
+      <a href="#" class="btn btn__menu"  onclick="show('animalForm')">Add Animals</a>
+      <a href="#" id="defaultList" class="btn btn__menu">Add Default Animals List</a>
+      <a href='#' class="title btn btn__start">Start Race</a>
+      <br>
+      <br>
+      <br>
+      </p>      
+      
+
+    </div>
+    <!--form for selecting animals for the race -->
+    <div class="popup" id="animalForm">
+      <div id="advancedDiv">
+        <form action="" class="form">
+      <label class="lbl">Time Per Step (secs): </label><input type="number" step="0.01" min="0.01"id="aniTimeBetweenStep">
+      <label class="lbl">Height: </label> <input type="number" id="aniHeight"></span>
+      <label class="lbl">Width: </label><input type="number" id="aniWidth">
+    </form>
+    </div>
+
+      <a class = "btn btn__exit" onclick="hide('animalForm')"> 	&#10060;</a>
+      <form action="" class="form">
+        <label>Advanced Options</label>
+      <label class="switch">
+        <input type="checkbox" id="advancedSwitch" onclick="toggleAdvanced()">
+        <span class="slider round"></span>
+      </label>
+      <label class="lbl">Color: </label><input type="color" id="aniColor">
+
+      <select id="animalType" name="">
+
+      </select>
+      <input type="submit" class="addAnimalButton btn btn__menu" value="Add Animal" />
+      </form>
+
+
+    </div>
+
+
+    
+    <div id="content" class="content" display: block></div>
+
+    <div class="leaderboards__div">
+      <h3>Leaderboards</h3>
+      <div id="leaderboards" ></div>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script src="src/animal.js"></script>
+    <script src="src/cheetah.js"></script>
+    <script src="src/lion.js"></script>
+    <script src="src/gazelle.js"></script>
+    <script src="src/fox.js"></script>
+    <script src="src/kangaroo.js"></script>
+    <script src="src/race.js"></script>
+    <script src="src/init.js"></script>
+  </body>
+</html>
